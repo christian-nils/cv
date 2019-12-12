@@ -9,7 +9,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%	
+%
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -17,7 +17,7 @@
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
-%	
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -29,7 +29,7 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and dont use a cv template
-\documentclass[10pt,A4]{article}	
+\documentclass[10pt,A4]{article}
 
 
 %----------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@
 %----------------------------------------------------------------------------------------
 
 %we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}		
+\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
 %	LOGIC
@@ -59,14 +59,14 @@
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
-\usepackage{roboto} 
+\usepackage{roboto}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
 
 \usepackage{fontawesome5}
 
@@ -79,9 +79,9 @@
   mincitenames=1,%            % if there are more than maxcitenames, shrink to this
   backref=true,%              % prints page numbers (wrong with \frontmatter and hypertexnames=false)
   dashed=false,                % do not replace repeated author with a dash in bibliography
-  sorting=ynt
+  bibstyle=publist
 ]{biblatex}                   % Modern bibtex replacement (bibliography mgmt)
-
+\plauthorname[Christian-Nils][]{Boda}
 \preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}} % to be able to use fullcite with all authors
 \addbibresource{publications.bib}  % Bibliography file
 %----------------------------------------------------------------------------------------
@@ -89,18 +89,18 @@
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
-%\usepackage{showframe}			
+%\usepackage{showframe}
 
 
 %define page styles using geometry
-\usepackage[a4paper]{geometry}		
+\usepackage[a4paper]{geometry}
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1cm, bottom=-.6cm, left=0.4cm, right=1cm} 	
+\geometry{top=1cm, bottom=-.6cm, left=0.4cm, right=1cm}
 
 
 %less space between header and content
-\setlength{\headheight}{-5pt}		
+\setlength{\headheight}{-5pt}
 
 
 %customize entries left, center and right
@@ -114,10 +114,10 @@
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for layouting tables
-\usepackage{multicol}			
+\usepackage{multicol}
 \usepackage{multirow}
 
 %extended aligning of tabular cells
@@ -129,7 +129,7 @@
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for header image
 \usepackage{graphicx}
@@ -137,30 +137,30 @@
 %for floating figures
 \usepackage{wrapfig}
 \usepackage{float}
-%\floatstyle{boxed} 
+%\floatstyle{boxed}
 %\restylefloat{figure}
 
-%for drawing graphics		
-\usepackage{tikz}				
+%for drawing graphics
+\usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 \usepackage{transparent}
 \usepackage{color}
 
 %accent color
-\definecolor{complcol}{HTML}{30617f}
+\definecolor{complcol}{HTML}{457b9d}
 
 %dark background color
-\definecolor{bgcol}{HTML}{AAAAAA}
+\definecolor{bgcol}{HTML}{844924}
 
 %light background / accent color
-\definecolor{softcol}{HTML}{7c9885}
+\definecolor{softcol}{HTML}{f1faee}
 
-\definecolor{sectcol}{HTML}{28666e}
+\definecolor{sectcol}{HTML}{1d3557}
 
 
 %Package for links, must be the last package used
@@ -177,14 +177,14 @@
 % returns minipage width minus two times \fboxsep
 % to keep padding included in width calculations
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
-	
+
 
 %----------------------------------------------------------------------------------------
 % 	ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 
 % include the left arrow into a tikz picture
 % param1: fill color
@@ -236,7 +236,7 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
+% creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
@@ -249,7 +249,7 @@
 \vspace{8pt}
 	\begin{tabularx}{1\mpwidth}{p{0.70\mpwidth}  R}
 	 \textcolor{black}{\textbf{#2}} & \textcolor{bgcol}{#1} \\
-	 \textcolor{complcol}{\textbf{#3}} & 	 
+	 \textcolor{complcol}{\textbf{#3}} &
 	\end{tabularx}
 \vspace{2pt}
 \textcolor{softcol}{\hrule}
@@ -261,7 +261,7 @@
 \end{center}
 }
 
-% creates a stretched box as 
+% creates a stretched box as
 \newcommand{\cveventmeta}[2]
 {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
@@ -293,7 +293,7 @@
 
 %----------------------------------------------------------------------------------------
 %	ICON-SET EMBEDDING
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
@@ -349,7 +349,7 @@
 %----------------------------------------------------------------------------------------
 \cvsection{Status}
 
-Ph.D. candidate in Traffic Safety, M.Sc. Automotive Engineering, M.Sc. Industrial and Mechanical Engineering (Dipl. ing. Arts et Métiers PARISTECH)
+Ph.D. degree in Traffic Safety to be completed by December, 18th 2019. M.Sc. Automotive Engineering, M.Sc. Industrial and Mechanical Engineering (Dipl. ing. Arts et Métiers PARISTECH)
 
 \vspace{12pt}
 
@@ -384,7 +384,7 @@ Ph.D. candidate in Traffic Safety, M.Sc. Automotive Engineering, M.Sc. Industria
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{./png/myphoto.png}	
+	\includegraphics[width=0.6\linewidth]{./png/myphoto.png}
 \end{figure}
 
 \begin{center}
@@ -402,13 +402,13 @@ Ph.D. candidate in Traffic Safety, M.Sc. Automotive Engineering, M.Sc. Industria
 	\iconhref{linkedin}{12}{cboda}{https://www.linkedin.com/in/cboda/?locale=en_US}{white}\\[6pt]
 
 \end{metasection}
-	
+
 %----------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{metasection}{Fields}
-	
+
 	\icontext{car-crash}{12}{Traffic safety research}{white}\\[3pt]
 	\icontext{user}{12}{Human factors analyses}{white}\\[3pt]
 	\icontext{user-cog}{12}{Driver behaviour modelling}{white}\\[3pt]
@@ -457,11 +457,11 @@ Ph.D. candidate in Traffic Safety, M.Sc. Automotive Engineering, M.Sc. Industria
 
 \parbox{1\mpwidth}{
 	\centering
-	\includegraphics[width=0.1\linewidth]{./png/france.png}	
+	\includegraphics[width=0.1\linewidth]{./png/france.png}
 	\hspace{4pt}
-	\includegraphics[width=0.1\linewidth]{./png/uk.png}	
+	\includegraphics[width=0.1\linewidth]{./png/uk.png}
 	\hspace{4pt}
-	\includegraphics[width=0.1\linewidth]{./png/sweden.png}	
+	\includegraphics[width=0.1\linewidth]{./png/sweden.png}
 }
 
 \end{minipage}}
@@ -473,17 +473,17 @@ Ph.D. candidate in Traffic Safety, M.Sc. Automotive Engineering, M.Sc. Industria
 	%	EDUCATION SECTION
 	%--------------------------------------------------------------------------------------
 	\cvsection{Education}
-	
+
 	\cvevent{2011 - 2013}{Chalmers University of Technology, Gothenburg}{M.Sc. Automotive Engineering}{
 		\begin{description}
 			\item[Master thesis] in the Accident Prevention research group, Chalmers University of Technology, I developed an embedded system that automatically provided speed instruction to a professional driver to control on-road testing with participants. Several Phidgets SBC were used to setup the whole system.
-		\item[Automotive Engineering Project] I took part in a project that developed a proof-of-concept Android application to provide a warning to a cyclist and a driver when their travel paths would lead to a crash. 
+		\item[Automotive Engineering Project] I took part in a project that developed a proof-of-concept Android application to provide a warning to a cyclist and a driver when their travel paths would lead to a crash.
 		\end{description}
 	}
-	
+
 	\cvevent{2009 - 2011}{Arts et Métiers PARISTECH, Aix-en-Provence}{M.Sc. Industrial and Mechanical Engineering}{Ranked 92/1107, awarded with the Silver medal.}
 	\cvevent{2007 - 2009}{Lycée Masséna, Nice}{Preparatory classes, MPSI-PSI, equivalent to B.Sc. Mathematics}{}
-	
+
 	\cvsection{Publications}
 	\nocite{*}
 	\begin{center}
